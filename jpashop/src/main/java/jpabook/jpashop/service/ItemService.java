@@ -15,13 +15,17 @@ public class ItemService {
 
     private final ItemRepository itemRepository;
 
-    // 상품등록
+    /**
+     * 상품 등록
+     */
     @Transactional
     public void save(Item item){
         itemRepository.save(item);
     }
 
-    // 상품조회
+    /**
+     * 상품 조회
+     */
     public List<Item> findItems(){
         return itemRepository.findAll();
     }
